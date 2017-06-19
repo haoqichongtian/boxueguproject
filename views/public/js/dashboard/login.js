@@ -3,8 +3,12 @@
  */
 define(['jquery','cookie'],function ($,ck) {
     $('#formLogin').submit(function () {
+        console.log('提交');
         var data = $(this).serializeArray();
-        console.log(data);
+        if (!$('input[name="tc_name"]').val() || !$('input[name="tc_pass"]').val()) {
+            alert('用户名或密码不能为空');
+            return false;
+        }
         $.ajax({
             url: '/api/login',
             type: 'post',

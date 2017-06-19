@@ -12,15 +12,12 @@ if (array_key_exists('PATH_INFO',$_SERVER)) {
       # code...
       $path='/views/dashboard/'.$arr[0];
     }
-    echo 'haha1';
 }else{
     $path='views/dashboard/index';
-    echo 'haha2';
 }
 //   var_dump($_SERVER);
 
    $path=$path.'.html';
-    echo 'haha';
    include $path;
 
 
