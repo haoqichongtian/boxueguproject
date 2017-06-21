@@ -1,12 +1,13 @@
-// NProgress.start();
-//
-// NProgress.done();
-//
-// $('.navs ul').prev('a').on('click', function () {
-//     $(this).next().slideToggle();
-// });
 
-define(['jquery','cookie','template'],function ($,c,template) {
+
+define(['jquery','cookie','template','nprogress'],function ($,c,template,NProgress) {
+    NProgress.start();
+
+    NProgress.done();
+
+    $('.navs ul').prev('a').on('click', function () {
+        $(this).next().slideToggle();
+    });
     if (!$.cookie('PHPSESSID') && location.pathname != '/login') {
         location.href = '/login';
     }
