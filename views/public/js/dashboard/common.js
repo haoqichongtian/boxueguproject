@@ -16,6 +16,7 @@ define(['jquery','cookie','template','nprogress'],function ($,c,template,NProgre
         console.log('ahah');
         var result = JSON.parse($.cookie('info'));
         var temhtml = template('infoTem', result);
+        console.log(temhtml);
         $('.aside>.profile').html(temhtml);
     }
     $('#logoutbtn').on('click',function () {
